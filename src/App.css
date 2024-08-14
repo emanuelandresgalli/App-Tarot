@@ -1,5 +1,5 @@
 html, body {
-  background-color: green;
+  background-color: rgb(173, 52, 210);
   height:100%;
   height:100%
 }
@@ -52,6 +52,25 @@ p {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: 400;
 }
+
+.carta-descripcion {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  background-color: rgb(173, 52, 210);
+  border-radius: 5px;
+}
+h2{
+  text-decoration: underline;
+  color: whitesmoke;
+  font-size: x-large;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: 400;
+
+}
+
+
 /* .carta-frontal {
   width: 100px;
   height: 150px;
