@@ -55,14 +55,14 @@ const TarotApp = () => {
     <div>
       {/* Mostrar la carta de reverso */}
       <div onClick={drawCard} style={{ cursor: 'pointer' }}>
-        <img className='carta-reverso' src="https://i.ibb.co/ZMzK1Kx/Reverso.png" alt="Carta de reverso" />
+        <img className='carta-reverso' src="https://i.ibb.co/ZMzK1Kx/Reverso.png" alt="Carta de reverso" loading="lazy" />
       </div>
 
       {/* Mostrar las cartas sacadas */}
       <div className='cartas-horizontal'>
         {drawnCards.map(card => (
           <div key={card.id} onClick={() => handleCardClick(card)} style={{ cursor: 'pointer' }}>
-            <img className='carta-frente' src={card.image} alt={card.name} />
+            <img className='carta-frente' src={card.image} alt={card.name} loading="lazy" />
             <p>{card.name}</p>
           </div>
         ))}
