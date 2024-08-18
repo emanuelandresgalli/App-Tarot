@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
   background-color: rgb(173, 52, 210);
   height:100%;
   height:100%
@@ -75,4 +75,115 @@ h2{
   width: 100px;
   height: 150px;
 }
-className='carta-frontal' */
+className='carta-frontal' */ 
+
+
+/* General */
+
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center; /* Centra todo el contenido dentro del contenedor */
+}
+
+/* Contenedor para la carta de reverso */
+.reverso-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para la carta de reverso */
+.carta-reverso {
+  width: 150px;
+  height: 250px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.carta-reverso:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor de las cartas sacadas */
+.cartas-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Estilo para las cartas mostradas */
+.carta-frente {
+  width: 100px;
+  height: 180px;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.carta-frente:hover {
+  transform: scale(1.05);
+}
+
+/* Contenedor para la descripción de las cartas */
+.carta-descripcion {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Estilo para los títulos de las cartas */
+.carta-descripcion h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Estilo para los párrafos de descripción */
+.carta-descripcion p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .carta-reverso {
+    width: 120px;
+    height: 200px;
+  }
+
+  .carta-frente {
+    width: 80px;
+    height: 150px;
+  }
+
+  .carta-descripcion {
+    padding: 15px;
+  }
+
+  .carta-descripcion h2 {
+    font-size: 1.2em;
+  }
+
+  .carta-descripcion p {
+    font-size: 0.9em;
+  }
+
+}

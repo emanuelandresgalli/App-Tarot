@@ -4,7 +4,7 @@ import './App.css';
 
 const TarotApp = () => {
   const [deck, setDeck] = useState([
-    { id: 0, name: 'El Loco', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,  ', image: 'https://i.ibb.co/L5QNWdQ/El-Loco.png' },
+    { id: 0, name: 'El Loco', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución. Nómada, Anarquía. deseo. Dimensión Infinita. Delirio. aspiración a la luz y a la vida eterna. Busqueda de la verdad. Avanzar hacia el desarrollo de todas las posibilidades humanas. profeta. Porta lo esencial. Visionario.  ', image: 'https://i.ibb.co/L5QNWdQ/El-Loco.png' },
     { id: 1, name: 'El Mago',  description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/5G2tryV/El-Mago.png' },
     { id: 2, name: 'La Papisa', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/XkkhQth/La-Papisa.png' },
     { id: 3, name: 'La Emperatriz',description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',   image: 'https://i.ibb.co/ysHRyq8/La-Emperatriz.png' },
@@ -17,7 +17,7 @@ const TarotApp = () => {
     { id: 10, name: 'La Rueda de la Fortuna', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/KbGdMNR/La-Rueda-De-La-Fortuna.png' },
     { id: 11, name: 'La Fuerza', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/1q7QDj6/La-Fuerza.png' },
     { id: 12, name: 'El Colgado', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/4JcWsW5/El-Colgado.png' },
-    { id: 13, name: 'El Arcano sin Nombre', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/t4VNN5N/El-Arcano-Sin-Nombre.png' },
+    { id: 13, name: 'Arcano XIII ', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/t4VNN5N/El-Arcano-Sin-Nombre.png' },
     { id: 14, name: 'Templanza', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/jwbGxX6/Templanza.png' },
     { id: 15, name: 'El Diablo', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/CnNXLjm/El-Diablo.png' },
     { id: 16, name: 'La Casa de Dios', description:'Energía Original. Indefinición, Libertad. Locura, Caos, Hombre que Marcha hacia la Evolución,',  image: 'https://i.ibb.co/BzP9nzK/La-Casa-De-Dios.png' },
@@ -52,12 +52,12 @@ const TarotApp = () => {
   };
 
   return (
-    <div>
-      {/* Mostrar la carta de reverso */}
-      <div onClick={drawCard} style={{ cursor: 'pointer' }}>
+    <div className="container">
+      {/* Contenedor para centrar la carta de reverso */}
+      <div className="reverso-container" onClick={drawCard} style={{ cursor: 'pointer' }}>
         <img className='carta-reverso' src="https://i.ibb.co/ZMzK1Kx/Reverso.png" alt="Carta de reverso" loading="lazy" />
       </div>
-
+  
       {/* Mostrar las cartas sacadas */}
       <div className='cartas-horizontal'>
         {drawnCards.map(card => (
@@ -67,13 +67,13 @@ const TarotApp = () => {
           </div>
         ))}
       </div>
-
+  
       {/* Mostrar las descripciones de las cartas seleccionadas */}
       {selectedCards.length > 0 && (
         <div className='carta-descripcion'>
           {selectedCards.map((card, index) => (
             <div key={index}>
-              <h2>{card.name}</h2>
+              <h2 >{card.name}</h2>
               <p>{card.description}</p>
             </div>
           ))}
@@ -81,6 +81,7 @@ const TarotApp = () => {
       )}
     </div>
   );
+  
 };
 
 export default TarotApp;
